@@ -1,6 +1,6 @@
 # What is Docker?
 
-LOGO
+![Docker logo](img/docker-logo.jpg)
 
 Docker is a tool for running software in an isolated environment.
 
