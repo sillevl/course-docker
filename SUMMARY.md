@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Docker Introduction](README.md)
-* [What is Docker?](first-chapter.md)
+* [What is Docker?](introduction.md)
 * [Containers](containers.md)
 * [Dockerfile](dockerfile.md)
 * [Building containers](building-containers.md)
