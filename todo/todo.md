@@ -26,3 +26,7 @@ if process ends, container ends
 
 
 
+{% embed data="{\"url\":\"https://gist.github.com/sillevl/09be59e875c706296cbfd01d627bc95e\",\"type\":\"rich\",\"title\":\"Docker file for node project with vue\",\"description\":\"Docker file for node project with vue · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars3.githubusercontent.com/u/979071?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\"text/javascript\\" src=\\"https://gist.github.com/09be59e875c706296cbfd01d627bc95e.js\\"></script>\",\"aspectRatio\":0}}" %}
+
+
+

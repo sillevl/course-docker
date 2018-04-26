@@ -1,10 +1,10 @@
 # Containers
 
-Container is a running instance of an image
+A container is a running instance of an image.
 
-an image is a template of an system you want to run.
+An image is a template of a system you want to run.
 
-it has the dependencies bundled inside the image to run the application
+It has all the dependencies bundled inside the image to run the application.
 
 PICTURE???
 
