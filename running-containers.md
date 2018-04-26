@@ -40,7 +40,7 @@ Lets start up a browser and surf to [http://192.168.99.100](http://192.168.99.10
 
 ![PHP page hosted from within a Docker container](.gitbook/assets/docker-hello-world-browser.png)
 
-In the terminal we should also see the loggin informatin of Apache detecting our HTTP request and showing some information about that request:
+In the terminal we should also see the logging information of Apache detecting our HTTP request and showing some information about that request:
 
 ```text
 192.168.99.1 - - [26/Apr/2018:19:06:10 +0000] "GET / HTTP/1.1" 200 241 "-" 
@@ -57,13 +57,13 @@ The `docker run` command that we used allows only a single container to run. Thi
 
 ### Running in the background
 
-Docker makes it possible to run containers in the background. This can easily  be done by adding the `-d` flag on the `docker run` command. The `-d` flag will deamonize the container. This means that the container will be running in the background.
+Docker makes it possible to run containers in the background. This can easily be realized by providing the `-d` flag with the `docker run` command. The `-d` flag will deamonize the container. This means that the container will be running in the background.
 
 ```text
  docker run -d -p 80:80 hello-world
 ```
 
-When running this command, the terminal will return a random string that represents the newly created container. This output could be used to automate other tasks. 
+When running this command, the terminal will return a random string that represents the newly created container. This output can be used to automate other tasks. 
 
 ```text
 $  docker run -d -p 80:80 hello-world
@@ -72,11 +72,11 @@ $  docker run -d -p 80:80 hello-world
 
 It is now possible to execute other commands in the terminal. The container will keep running until it is stopped manually.
 
-Test this by surfing to the webpage again and see if you get the Hello World message back.
+Test this by surfing to the webpage again and checking if you get the Hello World message back.
 
 ### Listing all running containers
 
-To see which containers are running, you can use the following command:
+To list which containers are running, you can use the following command:
 
 ```text
 docker ps
