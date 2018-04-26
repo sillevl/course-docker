@@ -3,7 +3,7 @@
 * [Docker Introduction](README.md)
 * [What is Docker?](what-is-docker.md)
 * [Containers](containers.md)
-* Installation
+* [Installation](installation.md)
 * Hello World app in PHP
 * [Dockerfile](dockerfile.md)
 * [Building containers](building-containers.md)
