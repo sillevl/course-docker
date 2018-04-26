@@ -43,7 +43,7 @@ docker login
 Before we can push the container we need to 'tag' it with a name. This can be done using the command
 
 ```text
-docker tag todomvc YOUR-USER-ID/ todomvc
+docker tag todomvc YOUR-USER-ID/todomvc
 ```
 
 {% hint style="info" %}
