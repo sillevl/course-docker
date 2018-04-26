@@ -51,5 +51,64 @@ In the terminal we should also see the loggin informatin of Apache detecting our
    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36"
 ```
 
+To end the Docker container, press `CTRL+C`. The container will then stop. The Apache server will stop, and it won't be possible to access the webpage again. 
+
+The `docker run` command that we used allows only a single container to run. This might be good to test something quickly, but on a production environment, many containers will be running.
+
 ### Running in the background
+
+Docker makes it possible to run containers in the background. This can easily  be done by adding the `-d` flag on the `docker run` command. The `-d` flag will deamonize the container. This means that the container will be running in the background.
+
+```text
+ docker run -d -p 80:80 hello-world
+```
+
+When running this command, the terminal will return a random string that represents the newly created container. This output could be used to automate other tasks. 
+
+```text
+$  docker run -d -p 80:80 hello-world
+9881cc50821035579c788372eb453c400ed5649c75a175d52627f27fd7bedab8
+```
+
+It is now possible to execute other commands in the terminal. The container will keep running until it is stopped manually.
+
+Test this by surfing to the webpage again and see if you get the Hello World message back.
+
+### Listing all running containers
+
+To see which containers are running, you can use the following command:
+
+```text
+docker ps
+```
+
+This will show something like this:
+
+```text
+$ docker ps
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS          PORTS                NAMES
+9881cc508210   hello-world   "docker-php-entryp..."   2 minutes ago   Up 2 minutes    0.0.0.0:80->80/tcp   cocky_mcclintock
+```
+
+### Stopping containers
+
+Stopping containers can be done with the following command:
+
+```text
+docker stop <container_id/name>
+```
+
+To stop the container that we created earlier, we can run the following command using its `CONTAINER_ID`:
+
+```text
+docker stop 9881cc508210
+```
+
+It is also possible to stop the container using its NAME. In this case the command should look like this:
+
+```text
+docker stop cocky_mclintock
+```
+
+Note that docker will give all its containers a random name. It is possible to assign a custom name to a container by providing the` --name` flag with the `docker run` command.
 
