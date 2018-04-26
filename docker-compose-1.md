@@ -27,10 +27,10 @@ services:
        - db_data:/var/lib/mysql
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_ROOT_PASSWORD: some_extra_secret_password
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress
+       MYSQL_PASSWORD: this_should_be_secret
 
    wordpress:
      depends_on:
@@ -42,10 +42,14 @@ services:
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_PASSWORD: this_should_be_secret
 volumes:
     db_data:
 ```
+
+{% hint style="danger" %}
+ Do note that the above username and passwords are used for demonstrational purposes only. A real production site should be authenticated using secure passwords.
+{% endhint %}
 
 ### Build the project
 
@@ -68,4 +72,6 @@ The WordPress site is not immediately available on port `8000` because the conta
 Now we should be good to go.
 
 ![WordPress up and running](.gitbook/assets/2018-04-26-11.png)
+
+You can stop the multi-container project by issuing the command `docker-compose down` .  This command removes the containers and default network, but preserves your WordPress database.
 
