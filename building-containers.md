@@ -97,7 +97,62 @@ Many more attributes can be used. They are described in the Docker documentation
 
 {% embed data="{\"url\":\"https://docs.docker.com/engine/reference/run/\",\"type\":\"link\",\"title\":\" \| Docker Documentation\",\"description\":\"Configure containers at runtime\",\"icon\":{\"type\":\"icon\",\"url\":\"https://docs.docker.com/favicons/docs@2x.ico\",\"width\":129,\"height\":128,\"aspectRatio\":0.9922480620155039},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://docs.docker.com/images/docs@2x.png\",\"width\":950,\"height\":500,\"aspectRatio\":0.5263157894736842}}" %}
 
+Ok, lets run this command now. The result should look like this:
 
+```text
+$ docker build -t hello-world .
+Sending build context to Docker daemon  3.072kB
+Step 1/3 : FROM php:7.2-apache
+7.2-apache: Pulling from library/php
+2a72cbf407d6: Already exists
+273cd543cb15: Already exists
+ec5ac8875de7: Already exists
+9106e19b56c1: Already exists
+ee2f70ac7c7d: Pull complete
+7257ad6985e8: Pull complete
+18f5c2055da2: Pull complete
+85293a6fdd80: Pull complete
+9e797eeb0c14: Pull complete
+f16178842884: Pull complete
+13899c06d3f8: Pull complete
+70c27fe4c3c5: Pull complete
+e2267ec5c36e: Pull complete
+322029cfc164: Pull complete
+9482c722339b: Pull complete
+Digest: sha256:a1dd126ffa530a70b80efae9fac2d18faf591a2a6f74841cc517a2168cde24f4
+Status: Downloaded newer image for php:7.2-apache
+ ---> ac8c4378955f
+Step 2/3 : COPY . /var/www/html
+ ---> b67f46c0f83e
+Step 3/3 : EXPOSE 80
+ ---> Running in 560b0e1a8cc8
+ ---> 3a0867a3b241
+Removing intermediate container 560b0e1a8cc8
+Successfully built 3a0867a3b241
+Successfully tagged hello-world:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows 
+Docker host. All files and directories added to build context will have '-rwxr-xr-x' 
+permissions. It is recommended to double check and reset permissions for sensitive 
+files and directories.
+```
 
+First we can see that Docker will download \(pull\) the `php:7.2-apache` image from the internet. Next it will execute the commands provided in the `Dockerfile`. The result is a new images called `hello-world`.
 
+### The `hello-world` image
+
+You can list the installed images using the following command:
+
+```text
+docker images
+```
+
+This command will list all installed images on the computer. The `hello-world` image should be visible in that list.
+
+```text
+$ docker images
+REPOSITORY        TAG         IMAGE ID            CREATED         SIZE
+hello-world       latest      3a0867a3b241        8 minutes ago   412MB
+```
+
+You have now created your own custom Docker image. In the next chapter we will take a look on how to run this image and get the webpage visible in a browser.
 
