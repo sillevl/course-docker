@@ -10,7 +10,7 @@
 * [Running containers](running-containers.md)
 * [Volumes](volumes.md)
 * [Inspecting containers](inspecting-containers.md)
-* Docker Hub
+* [Docker Hub](docker-hub-1.md)
 * Docker Compose
 
 ## TODO
