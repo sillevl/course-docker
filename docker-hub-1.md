@@ -58,7 +58,7 @@ docker push YOUR-USER-ID/todomvc
 
 You can now go to your Docker Hub and see your newly pushed image at [https://hub.docker.com/](https://hub.docker.com/)
 
-The image is now available to anybody and can be run with the command
+The image is now available to anybody and a container be created from it and run using the command
 
 ```text
 docker run -it -p 80:3000 YOUR-USER-ID/todomvc
