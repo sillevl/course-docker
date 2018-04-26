@@ -21,7 +21,7 @@ Lets execute the command and check if everything is running.
 The terminal will output the output of the container when running this command. It should look something like this:
 
 ```text
-$ docker run -p 80:80 hello-world
+$ docker run -it -p 80:80 hello-world
 AH00558: apache2: Could not reliably determine the server's fully qualified 
 domain name, using 172.17.0.3. Set the 'ServerName' directive globally to 
 suppress this message
