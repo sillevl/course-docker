@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Docker Introduction](README.md)
-* [What is Docker?](introduction.md)
+* [What is Docker?](what-is-docker.md)
 * [Containers](containers.md)
 * [Dockerfile](dockerfile.md)
 * [Building containers](building-containers.md)
@@ -11,14 +11,14 @@
 
 ## TODO
 
-* [TODO](test/todo.md)
+* [TODO](todo/todo.md)
 * Docker Hub
 * Isolation
 * Networks
 * Creating software images
 * Docker cloud
 * Swarm
-* Untitled
+* [Planning](todo/untitled.md)
 
 ## Docker Compose
 

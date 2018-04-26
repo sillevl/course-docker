@@ -1,20 +1,18 @@
 # What is Docker?
 
-![Docker logo](img/docker-logo.jpg)
+![Docker logo](.gitbook/assets/docker-logo.jpg)
 
 Docker is a tool for running software in an isolated environment.
 
 It offers advantages similar to running applications in virtual machines.
 
 1. Same environment
-2. Sandbox projects \(security and conflicting dependencies\)
+2. Sandboxed projects \(security and conflicting dependencies\)
 3. It just works \(all dependencies are available inside the container\)
 
-All advantages without a virtual machine
+All advantages of a virtual machine without the overhead of a virtual machine:
 
-
-
-Using same kernel
+* Using same kernel
 
 special features of the Linux system to create isolated environment
 

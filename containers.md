@@ -1,6 +1,6 @@
 # Containers
 
-Container is a running instance of an image 
+Container is a running instance of an image
 
 an image is a template of an system you want to run.
 
@@ -14,19 +14,17 @@ Image contains
 * Software
 * Application code
 
+![Basic computer stack](.gitbook/assets/basic-computer-stack.png)
 
+![Docker stack](.gitbook/assets/docker-stack.png)
 
-![Basic computer stack](img/basic-computer-stack.png)
+![Dependencies and relationships](.gitbook/assets/dependencies-and-relationships.png)
 
-![Docker stack](img/docker-stack.png)
+![Dependencies and relationships in docker images](.gitbook/assets/dockerized-dependencies.png)
 
-![Dependencies and relationships](img/dependencies-and-relationships.png)
+![Docker run command with a new image](.gitbook/assets/docker-run-command-for-new-image.png)
 
-![Dependencies and relationships in docker images](img/dockerized-dependencies.png)
+![Docker run command with an existing image](.gitbook/assets/docker-run-command-for-existing-image.png)
 
-![Docker run command with a new image](img/docker-run-command-for-new-image.png)
-
-![Docker run command with an existing image](img/docker-run-command-for-existing-image.png)
-
-![Docker vs Virtual Machines](img/virtualmachine-vs-docker.png)
+![Docker vs Virtual Machines](.gitbook/assets/virtualmachine-vs-docker.png)
 
