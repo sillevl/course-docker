@@ -24,7 +24,7 @@ The table below lists the most common used instructions for a Dockerfile.
 
 ### An example of a Dockerfile
 
-Below is an example of a docker file used to setup a Ruby on Rails application.
+Below is an example of a Dockerfile used to setup a Ruby on Rails application.
 
 ```text
 # The image to start from
