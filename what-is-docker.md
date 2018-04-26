@@ -12,11 +12,11 @@ It offers advantages similar to running applications in virtual machines.
 
 All advantages of a virtual machine without the overhead of a virtual machine:
 
-* Using same kernel
+Containers all use the same kernel of the host machine.
 
-special features of the Linux system to create isolated environment
+Special features of the Linux system to create isolated environment. Docker is a bundle of existing proven linux tools \(chroot, cgroups, ...\).
 
-containers are a compromise, separation and sandboxing is not strict, but its enough
+Containers are a compromise: separation and sandboxing are not strict, but its enough
 
-containers start up in seconds. Use less resources, and less memory.
+Containers start up in seconds. Use less resources, and less memory.
 
