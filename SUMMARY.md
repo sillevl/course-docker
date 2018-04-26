@@ -3,11 +3,15 @@
 * [Docker Introduction](README.md)
 * [What is Docker?](what-is-docker.md)
 * [Containers](containers.md)
+* Installation
+* Hello World app in PHP
 * [Dockerfile](dockerfile.md)
 * [Building containers](building-containers.md)
 * [Running containers](running-containers.md)
 * [Volumes](volumes.md)
 * [Inspecting containers](inspecting-containers.md)
+* Docker Hub
+* Docker Compose
 
 ## TODO
 
