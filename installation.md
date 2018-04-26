@@ -1,6 +1,6 @@
 # Installation
 
-Docker uses Linux-specific kernel and therefore does not run natively on Windows. Docker Toolbox solves this by providing a command line interface to the docker engine running on a virtual machine equiped with a Linux kernel.
+Docker uses Linux-specific kernel features and therefore does not run natively on Windows. Docker Toolbox solves this by providing a command line interface to the docker engine running on a virtual machine equiped with a Linux kernel.
 
 To use docker on Windows, download the Docker Toolbox at [https://docs.docker.com/toolbox/toolbox\_install\_windows/](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
