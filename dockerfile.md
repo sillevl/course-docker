@@ -10,6 +10,8 @@ A Dockerfile is human readable text file with a list of steps that describe how 
 
 ### Common Dockerfile instructions
 
+The table below lists the most common used instructions for a Dockerfile.
+
 | Instruction | Details |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `FROM` | When creating a Dockerfile it should always specify **on which image it should be based**. This is achieved using the FROM instruction. A common source of images to base your image on is Dockerhub. Specify a specific version using a color `:<version_number>`use the latest image using `:latest` |
@@ -19,8 +21,6 @@ A Dockerfile is human readable text file with a list of steps that describe how 
 | `COPY <src> <dst>` | C**opies files or directories** from the host file system to the image. Relative paths can be used for both the source as the destination. Relative paths in the destination are relative to the working directory. |
 | `EXPOSE <port>/<udp,tcp>` | Indicates that the **container listens on the specified ports** when running. If no protocol is specified, than it **defaults to tcp**. Do note that the EXPOSE instruction does not actually publish the port - this needs to be done when running the container. |
 | ` CMD ["executable","arg1","arg2"]` | Specifies the application or **executable process that needs to be run** in the container when started. Only a single CMD instruction can be specified within a Dockerfile. |
-
-
 
 ### An example of a Dockerfile
 
@@ -56,16 +56,7 @@ EXPOSE 3000
 
 # The final command that starts the rails server
 CMD ["rails", "server", "-b", "0.0.0.0"]
-
 ```
-
-
-
-Building images using the dockerfile
-
-{% hint style="info" %}
-Hands on !
-{% endhint %}
 
 
 
