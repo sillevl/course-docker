@@ -8,6 +8,11 @@ A Dockerfile is human readable text file with a list of steps that describe how 
 * copy the application files
 * install the required depencies
 
+### Common Dockerfile instructions
+
+* FROM:
+* `WORKDIR`: sets de **default working directory** for instructions that follow. If needed, the directory will be created.
+
 ### An example of a Dockerfile
 
 Below is an example of a docker file used to setup a Ruby on Rails application.
@@ -17,7 +22,6 @@ Below is an example of a docker file used to setup a Ruby on Rails application.
 FROM ruby:2.3
 
 # Setup a working directory for our app
-RUN mkdir -p /app
 WORKDIR /app
 
 # Install nodejs and some other required dependencies
