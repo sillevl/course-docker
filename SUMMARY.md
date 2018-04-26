@@ -11,7 +11,7 @@
 * [Volumes](volumes.md)
 * [Inspecting containers](inspecting-containers.md)
 * [Docker Hub](docker-hub-1.md)
-* Docker Compose
+* [Docker Compose](docker-compose-1.md)
 
 ## TODO
 
