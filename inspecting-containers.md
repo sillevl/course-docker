@@ -18,7 +18,7 @@ It is also possible to keep the log open. Any new additions to the log will be a
 
 ### Docker exec
 
-When a container is running in the background. It is possible to execute commands inside that container. A popular command is `bash`. This enables to view what is going on inside the container. You could compare this with an SSH session into the Container.
+Even when a container is running in the background, it is possible to execute commands inside that container. A popular command is `bash`. This effectively launches a shell process and enables you to view and interact with the container. You could compare this with an SSH session into the container.
 
 ```text
 docker exec -it <containerIdOrName> bash
