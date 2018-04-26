@@ -1,28 +1,83 @@
 # Building containers
 
-### Docker toolbox
+Lets create a `Dockerfile` in the project directory for our Hello World project. The Hello World application is written in the PHP programming language, so we will need an image that provides the PHP binaries. Next we also need an production grade HTTP server such as Apache to host the PHP files \(The `php -S` command that we used earlier is good for testing, but is cannot deliver the performance and features for real world applications\).
 
+So we need the following dependencies inside our container:
 
+* PHP binaries
+* Apache HTTP server
 
-download
-
-how it works \(virtual box\)
-
-
-
-### Hello World Application
-
-
-
-{% embed data="{\"url\":\"https://gist.github.com/sillevl/d186dd28bd4f0326ad37b4f695edd9a9\",\"type\":\"rich\",\"title\":\"PHP Hello world application\",\"description\":\"PHP Hello world application · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars3.githubusercontent.com/u/979071?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\"text/javascript\\" src=\\"https://gist.github.com/d186dd28bd4f0326ad37b4f695edd9a9.js\\"></script>\",\"aspectRatio\":0}}" %}
+We could create an Docker image from scratch, compiling, building, configuring and installing the dependencies by our self. This would be a tedious task, but is feasible. A better idea is to start 'from' an already built image that provides the dependencies. 
 
 ### Docker Hub
 
-find apache image
+Docker Hub is a place that bundles existing Docker images, free and open for anybody to use. 
+
+[https://hub.docker.com](https://hub.docker.com)
+
+![Docker Hub website](.gitbook/assets/docker-hub.png)
+
+#### Finding a PHP image
+
+Lets search for a fitting base image to build our image upon. Let's try to search for `PHP`
+
+This should give us the following results:
+
+![](.gitbook/assets/docker-hub-search-php.png)
+
+Many image are available that provide support for PHP inside Docker. Many of them could be used. To make it easier to determine an active and supported image, Docker Hub will provide some extra information such as 'stars' and 'pulls'. People can 'star' images that they like. This will give an indication of the popularity. 'pulls' shows the amount of times that the images has been pulled, either to create an new image, or to deploy a container that is based on that image.
+
+Another parameter that could help deciding what image to use is the developer. The developer is the first part before the `/` in the full container name. For example `webdevops/php-apache-dev` means that the image with name `php-apache-dev` is made by the `webdevops `developer or team.
+
+Some image don't have a developer name and `/` sign. These images are 'official' images. They are created and maintained by the people of docker. They provide many of the popular solutions. Many times depending on one of these images is preferable. 
+
+The best choice in our case would be the official `PHP `image. Lets click on it to see its details.
+
+![Details for the official PHP image](.gitbook/assets/docker-hub-php-image.png)
+
+The PHP repository provides many variations of its images. Any variation can be chosen by using its 'tag'. This enables that you could depend on older versions, or have the cli variant for testing, or an Apache version for production. 
+
+Note that you can always leave the tag empty. In that case Docker will use the default tag called `latest`.
+
+Lets choose the latest version of PHP, and we also need Apache, so the `7.2-apache` tag would be useful for our application.
+
+### `FROM`
+
+Now that we found an image to depend on, lets add it to our `Dockerfile`. We can add this by using the FROM keyword followed by the name of the image, and the name of the tag we would like to start from. In our case this would result in 
+
+```text
+FROM php:7.2-apache
+```
+
+Now we have an Linux image with PHP and Apache installed.
+
+### `COPY`
+
+Next we need to copy our project files into the image. This can be done with the `COPY `keyword. The copy keyword accepts two arguments. The source of the files on our computer, and the destination in the Docker image.
+
+Apache is by default configured to host files that are stored inside the `/var/www/html` directory. So we will need to copy the files from our project to that directory. This can be done with the following command.
+
+```text
+COPY . /var/www/html
+```
+
+Note that the `.` \(dot\) represents the current directory. So all files and folder that are in the same directory as the Dockerfile will be copied.
+
+### `EXPOSE`
+
+The goal of docker is to isolate software as much as possible. This means that TCP/IP traffic is unable to get in or out of the container. This can be solved by `EXPOSE`ing a TCP or UDP port. This will open up the port on the container, making communication with the outside world and vice versa possible.
+
+Apache runs on port 80 to serve HTTP. This means that we need to open up this port in the container. This can be done with the following command:
+
+```text
+EXPOSE 80
+```
 
 
 
 ### Dockerfile
+
+This should be enough to run the Hello World application into a Docker container. The `Dockerfile`should look like this:
 
 {% embed data="{\"url\":\"https://gist.github.com/sillevl/7bf84245ae48c611ea841fc573beb834\",\"type\":\"rich\",\"title\":\"Hello World Dockerfile\",\"description\":\"Hello World Dockerfile · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars3.githubusercontent.com/u/979071?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\"text/javascript\\" src=\\"https://gist.github.com/7bf84245ae48c611ea841fc573beb834.js\\"></script>\",\"aspectRatio\":0}}" %}
 
