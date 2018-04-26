@@ -12,6 +12,7 @@ A Dockerfile is human readable text file with a list of steps that describe how 
 
 * FROM:
 * `WORKDIR`: sets de **default working directory** for instructions that follow. If needed, the directory will be created.
+* `ENV`: Sets an **environmental variable **to a specified value. These **will persist **when a container is run from the resulting image.
 
 ### An example of a Dockerfile
 
