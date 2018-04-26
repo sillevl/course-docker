@@ -1,5 +1,7 @@
 # Containers
 
+Containers are not virtualization.
+
 A container is a running instance of an image.
 
 An image is a template of a system you want to run.
@@ -14,6 +16,8 @@ Image contains
 * Software
 * Application code
 
+
+
 ![Basic computer stack](.gitbook/assets/basic-computer-stack.png)
 
 ![Docker stack](.gitbook/assets/docker-stack.png)
@@ -25,6 +29,4 @@ Image contains
 ![Docker run command with a new image](.gitbook/assets/docker-run-command-for-new-image.png)
 
 ![Docker run command with an existing image](.gitbook/assets/docker-run-command-for-existing-image.png)
-
-![Docker vs Virtual Machines](.gitbook/assets/virtualmachine-vs-docker.png)
 
