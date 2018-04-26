@@ -16,16 +16,5 @@
 ## TODO
 
 * [TODO](todo/todo.md)
-* Docker Hub
-* Isolation
-* Networks
-* Creating software images
-* Docker cloud
-* Swarm
 * [Planning](todo/untitled.md)
-
-## Docker Compose
-
-* Docker Compose
-* Untitled
 
