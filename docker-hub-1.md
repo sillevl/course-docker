@@ -2,7 +2,7 @@
 
 Sharing Docker images is made easy by Docker Hub. Anybody can create an account to Docker Hub to distribute images that can be deployed on other systems or by other users. 
 
-For this example, lets use an open source project from github. The TodoMVC using Nodejs, Vue, and Nuxt should be a great example. It is a demo application using JavaScript on the server and client. 
+For this example, let us use an open source project from github. The TodoMVC using Nodejs, Vue, and Nuxt should be a great example. It is a demo application using JavaScript on the server and client. 
 
 {% embed data="{\"url\":\"https://github.com/nuxt/todomvc\",\"type\":\"link\",\"title\":\"nuxt/todomvc\",\"description\":\"todomvc - Nuxt.js TodoMVC Example\",\"icon\":{\"type\":\"icon\",\"url\":\"https://github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars0.githubusercontent.com/u/23360933?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1}}" %}
 
