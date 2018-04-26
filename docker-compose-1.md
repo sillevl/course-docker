@@ -75,3 +75,5 @@ Now we should be good to go.
 
 You can stop the multi-container project by issuing the command `docker-compose down` .  This command removes the containers and default network, but preserves your WordPress database.
 
+A lot more information about Docker Compose can be found at [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
+
