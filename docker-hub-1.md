@@ -66,3 +66,5 @@ docker run -it -p 80:3000 YOUR-USER-ID/todomvc
 
 You should now be able to visit the webpage at [http://192.168.99.100](http://192.168.99.100)
 
+![](.gitbook/assets/todomvc.png)
+
