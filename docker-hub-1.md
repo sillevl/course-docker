@@ -32,9 +32,9 @@ You can test the container using the command
 docker run -it -p 80:3000 todomvc
 ```
 
-When everything works well, you could share the container using Docker Hub. You will need to create an account to be able to push \(upload\) containers and distribute them to other systems or developers.
+When everything works well, you could share the image using Docker Hub. You will need to create an account to be able to push \(upload\) an image and distribute it to other systems or developers.
 
-When you have an account, you can log in to Docker Hub using the command line using the command
+When you have an account, you can log in to Docker Hub using the command
 
 ```text
 docker login
