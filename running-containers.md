@@ -36,7 +36,13 @@ line: 'apache2 -D FOREGROUND'
 
 This is the normal output of the Apache application.
 
-Lets start up a browser and surf to [http://192.168.99.100](http://192.168.99.100) If all goes well, we should be able to see the webpage. 
+Lets start up a browser and surf to [http://192.168.99.100](http://192.168.99.100).
+
+{% hint style="info" %}
+To determine the IP address of your VM simply execute the command `docker-machine ip`
+{% endhint %}
+
+If all goes well, we should be able to see the webpage. 
 
 ![PHP page hosted from within a Docker container](.gitbook/assets/docker-hello-world-browser.png)
 
