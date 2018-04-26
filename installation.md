@@ -4,7 +4,7 @@ Docker uses Linux-specific kernel features and therefore does not run natively o
 
 To use docker on Windows, download the Docker Toolbox at [https://docs.docker.com/toolbox/toolbox\_install\_windows/](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
-### Step to take
+### Steps to take
 
 ![Welcome](.gitbook/assets/2018-04-26.png)
 
