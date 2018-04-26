@@ -58,5 +58,7 @@ EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
 ```
 
-
+{% hint style="danger" %}
+ Note that the order of the instructions does play a significant role when creating a Dockerfile. During the process of building an image Docker steps through the instructions in your Dockerfile executing each in the order specified. As each instruction is examined, Docker looks for an existing image in its cache that it can reuse, rather than creating a new \(duplicate\) image. This means that your build stage layers \(created by most Dockerfile instructions\) should be ordered from the less frequently changed to the more frequently changed allowing maximum use of cached images.
+{% endhint %}
 
