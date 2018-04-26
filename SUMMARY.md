@@ -4,7 +4,7 @@
 * [What is Docker?](what-is-docker.md)
 * [Containers](containers.md)
 * [Installation](installation.md)
-* Hello World app in PHP
+* [Hello World app in PHP](hello-world-app-in-php.md)
 * [Dockerfile](dockerfile.md)
 * [Building containers](building-containers.md)
 * [Running containers](running-containers.md)

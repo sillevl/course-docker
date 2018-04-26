@@ -12,9 +12,9 @@ how it works \(virtual box\)
 
 ### Hello World Application
 
+
+
 {% embed data="{\"url\":\"https://gist.github.com/sillevl/d186dd28bd4f0326ad37b4f695edd9a9\",\"type\":\"rich\",\"title\":\"PHP Hello world application\",\"description\":\"PHP Hello world application · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars3.githubusercontent.com/u/979071?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\"text/javascript\\" src=\\"https://gist.github.com/d186dd28bd4f0326ad37b4f695edd9a9.js\\"></script>\",\"aspectRatio\":0}}" %}
-
-
 
 ### Docker Hub
 
