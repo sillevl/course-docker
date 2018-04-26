@@ -8,9 +8,9 @@ To run the hello-world image that we created earlier, we can use the following c
 docker run -it -p 80:80 hello-world
 ```
 
-The command tells to run the hello-world image and create a container. Next we need to tell that we also want the internal port 80 to be available on port 80 on the host machine, this can be done by using the `-p` flag. All traffic to port 80 of the Docker host will be forwarded to port 80 in the container. 
+The command creates a container based on the hello-world image. Next we need to instruct Docker that we also want the internal port 80 to be available on port 80 on the host machine. This can be achieved by using the `-p` flag. All traffic to port 80 of the Docker host will be forwarded to port 80 in the container. 
 
-The `-it` flag will make sure the output of the Container is forwarded to our terminal. Terminating the terminal output will also result in terminating the container.
+The `-it` flag will make sure the output of the container is forwarded to our terminal. Terminating the terminal output will also result in the termination of the container.
 
 Other flags are documented in the Docker documentation:
 
@@ -18,7 +18,7 @@ Other flags are documented in the Docker documentation:
 
 Lets execute the command and check if everything is running.
 
-The terminal will output the output of the container when running this command. It should look somethig
+The terminal will output the output of the container when running this command. It should look something like this:
 
 ```text
 $ docker run -p 80:80 hello-world
