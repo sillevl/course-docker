@@ -22,5 +22,17 @@ Ready for installation
 
 ![Ready for install](.gitbook/assets/2018-04-26-5.png)
 
+### Launching the CLI
+
+To start using the Docker Toolbox find the "Docker QuickStart Terminal" and launch it.
+
+The first time you run the terminal app it will setup a virtual machine and do some configurations.
+
+![First time setup](.gitbook/assets/2018-04-26-6.png)
+
+Shortly after the CLI should become available.
+
+![Docker toolbox CLI](.gitbook/assets/2018-04-26-7.png)
+
 
 
