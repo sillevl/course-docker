@@ -81,11 +81,23 @@ This should be enough to run the Hello World application into a Docker container
 
 {% embed data="{\"url\":\"https://gist.github.com/sillevl/7bf84245ae48c611ea841fc573beb834\",\"type\":\"rich\",\"title\":\"Hello World Dockerfile\",\"description\":\"Hello World Dockerfile · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars3.githubusercontent.com/u/979071?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\"text/javascript\\" src=\\"https://gist.github.com/7bf84245ae48c611ea841fc573beb834.js\\"></script>\",\"aspectRatio\":0}}" %}
 
+### Building the image
 
+The `Dockerfile `only describes how an image is created. The next step is to build the image. Building the image will execute the commands in the `Dockerfile`.  Building the image needs to be done with the `docker build` command in the terminal.
+
+The docker build command needs some extra information to be able to build the image correctly.
+
+The first argument is a tag. This can be provided with the `-t` or `--tag` attribute followed by the name of the tag. Lets tag our image with the name `hello-world`. The last attribute should be the directory where the `Dockerfile `is located. In our case this is the current directory and can be notated with a `.` \(dot\).
 
 ```bash
  docker build -t hello-world .
 ```
 
- layering of images \(image that php:7.2 is build on...\) Huge advantage of using docker
+Many more attributes can be used. They are described in the Docker documentation.
+
+{% embed data="{\"url\":\"https://docs.docker.com/engine/reference/run/\",\"type\":\"link\",\"title\":\" \| Docker Documentation\",\"description\":\"Configure containers at runtime\",\"icon\":{\"type\":\"icon\",\"url\":\"https://docs.docker.com/favicons/docs@2x.ico\",\"width\":129,\"height\":128,\"aspectRatio\":0.9922480620155039},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://docs.docker.com/images/docs@2x.png\",\"width\":950,\"height\":500,\"aspectRatio\":0.5263157894736842}}" %}
+
+
+
+
 
