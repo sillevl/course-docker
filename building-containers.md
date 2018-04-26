@@ -23,13 +23,13 @@ Lets search for a fitting base image to build our image upon. Let's try to searc
 
 This should give us the following results:
 
-![Search results for php on Docker Hub](.gitbook/assets/docker-hub-search-php.png)
+![](.gitbook/assets/docker-hub-search-php.png)
 
-Many image are available that provide support for PHP inside Docker. Many of them could be used. To make it easier to determine an active and supported image, Docker Hub will provide some extra information such as 'stars' and 'pulls'. People can 'star' images that they like. This will give an indication of the popularity. 'pulls' shows the amount of times that the images has been pulled, either to create a new image, or to deploy a container that is based on that image.
+Many image are available that provide support for PHP inside Docker. Many of them could be used. To make it easier to determine an active and supported image, Docker Hub will provide some extra information such as 'stars' and 'pulls'. People can 'star' images that they like. This will give an indication of the popularity. 'pulls' shows the amount of times that the images has been pulled, either to create an new image, or to deploy a container that is based on that image.
 
-Another parameter that could help to decide what image to use is the developer. The developer is the first part before the `/` in the full container name. For example `webdevops/php-apache-dev` means that the image with name `php-apache-dev` is made by the `webdevops `developer or team.
+Another parameter that could help deciding what image to use is the developer. The developer is the first part before the `/` in the full container name. For example `webdevops/php-apache-dev` means that the image with name `php-apache-dev` is made by the `webdevops `developer or team.
 
-Some image don not have a developer name and `/` sign. These images are 'official' images. They are created and maintained by the people of docker. They provide many of the popular solutions. Depending on one of these images is often preferable. 
+Some image don't have a developer name and `/` sign. These images are 'official' images. They are created and maintained by the people of docker. They provide many of the popular solutions. Many times depending on one of these images is preferable. 
 
 The best choice in our case would be the official `PHP `image. Lets click on it to see its details.
 
@@ -37,23 +37,25 @@ The best choice in our case would be the official `PHP `image. Lets click on it 
 
 The PHP repository provides many variations of its images. Any variation can be chosen by using its 'tag'. This enables that you could depend on older versions, or have the cli variant for testing, or an Apache version for production. 
 
+{% hint style="warning" %}
 Note that you can always leave the tag empty. In that case Docker will use the default tag called `latest`.
+{% endhint %}
 
-Lets choose the latest version of PHP. We also need Apache, so the `7.2-apache` tag would be useful for our application.
+Lets choose the latest version of PHP, and we also need Apache, so the `7.2-apache` tag would be useful for our application.
 
 ### `FROM`
 
-Now that we found an image to depend on, lets add it to our `Dockerfile`. We can add this by using the `FROM` keyword followed by the name of the image, and the name of the tag we would like to start from. In our case this would result in 
+Now that we found an image to depend on, lets add it to our `Dockerfile`. We can add this by using the FROM keyword followed by the name of the image, and the name of the tag we would like to start from. In our case this would result in 
 
 ```text
 FROM php:7.2-apache
 ```
 
-Now we have a Linux image with PHP and Apache installed.
+Now we have an Linux image with PHP and Apache installed.
 
 ### `COPY`
 
-Next we need to copy our project files into the image. This can be done using the `COPY `keyword. The copy keyword accepts two arguments. The source of the files on our computer, and the destination in the Docker image.
+Next we need to copy our project files into the image. This can be done with the `COPY `keyword. The copy keyword accepts two arguments. The source of the files on our computer, and the destination in the Docker image.
 
 Apache is by default configured to host files that are stored inside the `/var/www/html` directory. So we will need to copy the files from our project to that directory. This can be done with the following command.
 
@@ -61,13 +63,15 @@ Apache is by default configured to host files that are stored inside the `/var/w
 COPY . /var/www/html
 ```
 
-Note that the `.` \(dot\) represents the current directory. So all files and folders that are in the same directory as the Dockerfile will be copied.
+{% hint style="warning" %}
+Note that the `.` \(dot\) represents the current directory. So all files and folder that are in the same directory as the Dockerfile will be copied.
+{% endhint %}
 
 ### `EXPOSE`
 
 The goal of docker is to isolate software as much as possible. This means that TCP/IP traffic is unable to get in or out of the container. This can be solved by `EXPOSE`ing a TCP or UDP port. This will open up the port on the container, making communication with the outside world and vice versa possible.
 
-Apache runs on port 80 to serve HTTP. This means that we need to open up this port in the container. This can be achieved with the following instruction:
+Apache runs on port 80 to serve HTTP. This means that we need to open up this port in the container. This can be done with the following command:
 
 ```text
 EXPOSE 80

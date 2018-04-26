@@ -110,5 +110,9 @@ It is also possible to stop the container using its NAME. In this case the comma
 docker stop cocky_mclintock
 ```
 
+{% hint style="warning" %}
 Note that docker will give all its containers a random name. It is possible to assign a custom name to a container by providing the` --name` flag with the `docker run` command.
+{% endhint %}
+
+
 
