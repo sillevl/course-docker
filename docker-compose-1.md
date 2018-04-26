@@ -61,7 +61,7 @@ This pulls the required Docker images, and starts the specified containers, as s
 
 ### WordPress configuration
 
-At this point, WordPress should be running on port `8000` and you can complete the “famous five-minute installation” as a WordPress administrator.
+At this point, WordPress should be running on port `8000` at  [http://192.168.99.100:8000](http://192.168.99.100:8000) and you can complete the “famous five-minute installation” as a WordPress administrator.
 
 {% hint style="warning" %}
 The WordPress site is not immediately available on port `8000` because the containers are still being initialized and may take a couple of minutes before the first load.
