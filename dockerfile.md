@@ -2,7 +2,7 @@
 
 An image is defined using a Dockerfile
 
-A Dockerfile is text file with a list of steps that describe how to build the image
+A Dockerfile is human readable text file with a list of steps that describe how to build the image.
 
 * configure the system
 * copy the application files
