@@ -6,16 +6,16 @@ Let us demonstrate the power of compose by setting a WordPress blog website in a
 
 ### Example - A WordPress blog
 
-Start by create a new project directory for your WordPress application.
+Start by creating a new project directory for your WordPress application.
 
 ```text
 mkdir wordpress_demo
 cd wordpress_demo
 ```
 
-Now we need to create a `docker-compose.yml` file inside our project directory to define the different images that are required for our setup. Basically we define what images are required for our multi-container application: a mysql database server and a wordpress image. Using the `depends_on` key it is possible to indicate that the wordpress container requires a database container.
+Now we need to create a `docker-compose.yml` file inside our project directory to define the different services that are required for our setup. A service exist of a container with its specific settings to run. Basically we define what images are required for our multi-container application. To run a Wordpress blog, we need both a mysql database server and a Wordpress image. Using the `depends_on` key it is possible to indicate that the Wordpress container requires a database container, this will result in first starting the database container, and then starting the Wordpress container to prevent problems.
 
-Environment variables can be used to configure both wordpress and mysql accounts.
+Environment variables need to be used to configure both wordpress and mysql accounts.
 
 ```yaml
 version: '3.3'
@@ -54,6 +54,10 @@ volumes:
 ### Build the project
 
 Build the project by running `docker-compose up -d` inside your project directory.
+
+{% hint style="info" %}
+`docker-compose `up without the `-d` option can also be used to spin up the services. The services will not be run in the background. Output of any of the containers will be shown in the terminal. Ending the terminal will also stop the containers from running.
+{% endhint %}
 
 This pulls the required Docker images, and starts the specified containers, as shown in the example below. You can verify that the containers are up an running by executing the `docker ps` command.
 
