@@ -24,3 +24,7 @@ Docker breaks these dependencies by only providing the applications dependencies
 
 The way that docker implements its images, also optimizes re usability of common dependencies. This is due to the aspect that images are immutable. This results that many containers can depend on a single image, resulting in only a single need to store that image data. 
 
+### Improving portability
+
+Containers also solve the issue of portability. Due to the fact that all dependencies are bundled in the containers image, makes it very easy to distribute and deploy the software they contain.
+

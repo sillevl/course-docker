@@ -19,7 +19,7 @@ Docker makes it just more easy to use these technologies. With Docker, users get
 
 ### Containers are not virtualization
 
-Containers provide similar features as virtualization, but with less overhead. Containers share the same Linux kernel, removing the need to provide an OS for every instance. Containers don't add an extra layer. The application run directly on the hosts system. 
+Containers provide similar features as virtualization, but with less overhead. Containers share the same Linux kernel, removing the need to provide an OS for every instance. Containers don't add an extra layer. The applications run directly on the hosts system. 
 
 ![](.gitbook/assets/virtualmachine-vs-docker%20%281%29.png)
 
@@ -29,7 +29,7 @@ Containers offer advantages similar to running applications in virtual machines.
 2. Sandboxed projects \(security and conflicting dependencies\)
 3. It just works \(all dependencies are available inside the container\)
 
-The isolation that containers provide is not as strict as with virtual machines, but it's good enough. It still provides a very strong isolation.  Containers are a compromise: separation and sandboxing are not strict, but its enough.Reducing allot of the overhead makes containerization a viable solution for isolation.
+The isolation that containers provide is not as strict as with virtual machines. Containers are a compromise: separation and sandboxing are not strict, but its enough. Reducing a lot of the overhead makes containerization a viable solution for isolation.
 
-The reduced overhead, and the fact that containers run directly on the host system, results in the fact that containers start up in seconds. Use less resources, and less memory. They are very light weight.
+The reduced overhead, and the fact that containers run directly on the host system, result in the fact that containers start up in seconds. Use less resources, and less memory. They are very light weight.
 
