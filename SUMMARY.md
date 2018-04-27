@@ -13,8 +13,3 @@
 * [Docker Hub](docker-hub-1.md)
 * [Docker Compose](docker-compose-1.md)
 
-## TODO
-
-* [TODO](todo/todo.md)
-* [Planning](todo/untitled.md)
-
