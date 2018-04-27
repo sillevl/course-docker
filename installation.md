@@ -10,7 +10,7 @@ To use docker on Windows, download the Docker Toolbox at [https://docs.docker.co
 
 ![Installation destination](.gitbook/assets/2018-04-26-1.png)
 
-Make sure to select all components, only "Kitematic" is not required \(GUI\).
+Make sure to select all components, only "Kitematic" is not required \(GUI\) in this course, but may be installed to manage containers more easily.
 
 {% hint style="info" %}
  If you already have GIT \(a code version control system\) installed you can also leave this unchecked.
@@ -18,7 +18,7 @@ Make sure to select all components, only "Kitematic" is not required \(GUI\).
 
 ![Select components to install](.gitbook/assets/2018-04-26-3.png)
 
-Next make sure to add docker binaries to your environment path.
+Next make sure to add docker binaries to your environment path!
 
 ![Additional tasks](.gitbook/assets/2018-04-26-4.png)
 
@@ -28,7 +28,7 @@ Ready for installation
 
 ### Launching the CLI
 
-To start using the Docker Toolbox find the "Docker QuickStart Terminal" and launch it.
+To start using the Docker Toolbox find the "**Docker QuickStart Terminal**" and launch it.
 
 The first time you run the terminal app it will setup a virtual machine and do some configurations.
 
@@ -38,5 +38,5 @@ Shortly after the CLI should become available.
 
 ![Docker toolbox CLI](.gitbook/assets/2018-04-26-7.png)
 
-
+You are now ready to start using Docker.
 
