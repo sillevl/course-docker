@@ -4,7 +4,7 @@ A container is a running instance of an image. How images are built, is describe
 
 An image is a template of a system you want to run. It isolates only the minimal and necessary applications and dependencies to run a particular application. The kernel is provided by the host system, and isolation is done using existing kernel features.
 
-The image below shows a normal, non containerized system. All application run in the user space memory of the system. Just like any other program that runs on top of an operating system.
+The image below shows a normal, non-containerized system. All application run in the user space memory of the system. Just like any other program that runs on top of an operating system.
 
 ![Basic computer stack](.gitbook/assets/basic-computer-stack.png)
 
@@ -14,15 +14,15 @@ In a containerized environment, only a limited docker cli and docker daemon run 
 
 ### Getting organized
 
-Normal applications share allot of libraries and resources. This results in a tangled web of dependencies. Updating one application might result in breaking other applications. 
+Normal applications share a lot of libraries and resources. This results in a tangled web of dependencies. Updating one application might result in breaking other applications. 
 
 ![Dependencies and relationships](.gitbook/assets/dependencies-and-relationships.png)
 
-Docker breaks these dependencies by only providing the applications dependencies in a container. Updating a single container will never affect other containers. The only downside could be duplication of some some libraries or resources. This aspect diminishes in respect to the advantages that containerization provide. 
+Docker untangles these dependencies by only providing the applications dependencies in a container. Updating a single container will never affect other containers. The only downside could be duplication of some libraries or resources. This aspect diminishes in respect to the advantages that containerization provides. 
 
 ![Dependencies and relationships in docker images](.gitbook/assets/dockerized-dependencies.png)
 
-The way that docker implements its images, also optimizes re usability of common dependencies. This is due to the aspect that images are immutable. This results that many containers can depend on a single image, resulting in only a single need to store that image data. 
+The way that docker implements its images, also optimizes re-usability of common dependencies. This is due to the aspect that images are immutable. This results in the fact that many containers can depend on a single image, resulting in only a single need to store that image data. 
 
 ### Improving portability
 
